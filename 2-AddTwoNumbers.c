@@ -1,3 +1,4 @@
+#include<stdlib.h>
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -5,9 +6,13 @@
  *     struct ListNode *next;
  * };
  */
+struct ListNode {
+      int val;
+      struct ListNode *next;
+ };
 struct ListNode* newnode(int val,struct ListNode*last)
 {
-    struct ListNode*temp=(struct ListNode*)malloc(sizeof(struct ListNode));
+    struct ListNode*temp=(struct ListNode*)malloc(sizeof(struct  ListNode));
     temp->val=val;
     temp->next=NULL;
     if(last==NULL)
